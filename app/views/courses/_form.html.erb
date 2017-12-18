@@ -11,29 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group"">
     <%= form.label :titre %>
-    <%= form.text_field :titre, id: :course_titre %>
+    <%= form.text_field :titre, id: :course_titre, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :matiere %>
-    <%= form.text_field :matiere, id: :course_matiere %>
+    <%= form.text_field :matiere, id: :course_matiere, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :fac %>
-    <%= form.text_field :fac, id: :course_fac %>
+    <%= form.text_field :fac, id: :course_fac, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :annee %>
-    <%= form.text_field :annee, id: :course_annee %>
+    <%= form.text_field :annee, id: :course_annee, class: "form-control"%>
   </div>
 
-
-        <td><%= course.titre %></td>
-        <td><%= link_to "Download Course", course.pdf_url %></td>
+  <td><%= link_to "Download Course", course.pdf_url %></td>
+  <br><br>
 
   <div class="actions">
     <%= form.submit %>
