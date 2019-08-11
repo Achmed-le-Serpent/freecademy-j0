@@ -43,7 +43,7 @@ end
     def set_user
     end
 
-     def user_params
+    def user_params
       params.require(:user).permit(:image, :username, :fac, :formation, :niveau)
     end
   end

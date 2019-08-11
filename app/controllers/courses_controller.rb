@@ -1,3 +1,4 @@
+
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
   before_action :authenticate_user!
@@ -13,6 +14,7 @@ class CoursesController < ApplicationController
       format.html
       format.json
       format.pdf {render template:'courses/reporte', pdf: 'Reporte'}
+    end
   end
 
 
@@ -99,7 +101,5 @@ def downvote
     def course_params
       params.require(:course).permit(:titre, :matiere, :fac, :annee, :pdf)
     end
-
-end
 
 end
